@@ -1,0 +1,16 @@
+each obj in content.teamSection.header
+  h2.wow.fadeInLeft(data-wow-offset="100").team__title.primary-title= obj["team__title"]
+    span.accent-dot= obj["accent_dot"]
+  h2.team__subtitle.wow.fadeInLeft(data-wow-delay="0.4s")= obj["team__subtitle"]
+.row.team__list
+  each obj in content.teamSection.teamPersons
+    .col-sm-12.col-md-4.team__item.wow.fadeInUp(data-wow-offset="100")
+      .row.person__list
+        .col-xs-6.col-md-6.person__item
+          img.img-fluid(src=obj["photo"], alt=obj["name"])
+        .col-xs-6.col-md-6.person__item
+          h3.primary-title.title= obj["name"]
+          h3.subtitle= obj["position"]
+          p.about-me.description= obj["aboutMe"]
+button.wow.fadeInUp(data-wow-offset="100").team__more-btn.primary-btn.float-right More
+  i.fas.fa-arrow-right

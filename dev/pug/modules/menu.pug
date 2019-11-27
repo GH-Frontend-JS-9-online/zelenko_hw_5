@@ -1,0 +1,19 @@
+h1.brand-container
+  a.navbar-brand(href='#') Freelancer
+    span
+      |.
+nav
+  span.header__menu-btn(onclick='openNav()')
+    i.fas.fa-bars
+  .myNav.overlay
+    a.close-btn(href='javascript:void(0)' onclick='closeNav()')
+      i.fas.fa-times
+    ul.overlay-content.navbar-nav.d-flex.flex-md-row.flex-lg-row.flex-nowrap.justify-content-between
+      each val, key in nav.headerNav
+        li.navbar__item
+          a(href="val").navbar__link= key
+      li.navbar__item.d-flex.flex-row.justify-content-between.navbar__social
+        a(href="https://twitter.com").navbar__link
+          i.fab.fa-twitter
+        a(href="https://www.facebook.com").navbar__link
+          i.fab.fa-facebook-f

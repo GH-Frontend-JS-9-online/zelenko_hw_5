@@ -1,0 +1,7 @@
+include header.pug
+.hero.d-flex.flex-column.justify-content-center
+  each object in content.introSection
+    h2(data-wow-delay="0.6s").wow.fadeInLeft.title.primary-title= object["intro-title"]
+      i.accent-dot .
+    h3(data-wow-delay="1s").wow.fadeInLeft.subtitle= object["intro-subtitle"]
+    button(data-wow-delay="1.4s").wow.fadeInUp.intro__button Read More

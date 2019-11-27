@@ -1,0 +1,13 @@
+.row.portfolio__list
+  each obj in content.portfolioSection
+    .col-sm-12.col-md-6.portfolio__item
+      img.wow.flipInX(src=obj["portfolio_img"], alt="MacBook" data-wow-offset="100")
+    .col-sm-12.col-md-6.portfolio__item.wow.slideInRight(data-wow-offset="100")
+      h2.title.primary-title= obj["portfolio_title"]
+        span.accent-dot
+          |.
+      h3.subtitle= obj["portfolio_subtitle"]
+      p.description= obj["portfolio_description_1"]
+      p.description= obj["portfolio_description_2"]
+      button.portfolio__button.primary-btn More
+        i.fas.fa-arrow-right
